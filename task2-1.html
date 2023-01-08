@@ -8,15 +8,17 @@
 </head>
 <body>
     <script>
-        let x = countryInfo("Spain", "47 Million", "Madrid");
-          let y = countryInfo("Spain", "47 Million", "Madrid");
-           let z = countryInfo("Spain", "47 Million", "Madrid");
-        function countryInfo(country,population,capitalCity){
-            console.log(x);
-              console.log(y);
-             console.log(z);
+      function countryInfo(country, population, capitalCity) {
+  return `${country} has ${population} people and it's capital city is ${capitalCity}`;
+}
 
-        }
+let x = countryInfo("Spain", "47 Million", "Madrid");
+let y = countryInfo("palestine", "11Million", "jerusalem");
+let z = countryInfo("egypet", "90 Million", "cairo");
+console.log(x);
+console.log(y);
+console.log(z);
+
     </script>
 </body>
 </html>
