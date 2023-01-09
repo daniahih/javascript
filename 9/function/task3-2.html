@@ -23,10 +23,19 @@ welcome();
 // return result;
 // }
 const power = a => Math.pow(a,2);  //implicit
+
 const power2=a=>{        //explicit
     return Math.pow(a,2);
 }
 
+
+// From function expressions to IIFE functions.
+
+const squareRoot = a => Math.sqrt(a);
+
+
+const randomNumbers = (a, b) => Math.random() * (a - b) +
+b;
 
 
 
