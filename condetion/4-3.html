@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        let johnsTeamscore1 = 89;
+        let johnsTeamscore2 = 94;
+        let johnsTeamscore3 = 103;
+
+        let mikesTeam1 = 7;
+        let mikesTeam2 = 110;
+        let mikesTeam3 = 77;
+
+        let maryTeam1 = 170;
+        let maryTeam2 = 154;
+        let maryTeam3 = 175;
+        
+        function avarage(number1,number2,number3){
+            
+            let sum = number1 +number2 + number3;
+            let avarage = sum / 3;
+            return avarage;
+        }
+        let  johnsAvg=(avarage(johnsTeamscore1,johnsTeamscore2,johnsTeamscore3));
+        let mikesAvg=(avarage(mikesTeam1,mikesTeam2,mikesTeam3));
+        let maryAvg=(avarage(maryTeam1 ,maryTeam2,maryTeam3));
+
+       if( johnsAvg > mikesAvg){
+        console.log("john team winner");
+        console.log(johnsAvg);
+        console.log(mikesAvg)
+       }else if(johnsAvg < mikesAvg){
+        console.log("mikes team winner");
+        console.log(johnsAvg);
+        console.log(mikesAvg);
+       }
+       else if(maryAvg > johnsAvg && maryAvg > mikesAvg){
+        console.log("mary team winner");
+       }
+
+
+       
+
+       
+  
+
+
+</script>
+</body>
+</html>
