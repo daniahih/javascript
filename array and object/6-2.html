@@ -12,8 +12,55 @@
     for (let i = 0; i < people.length; i++){
 
 console.log(people[i]);
+}
+
+// 2. Write the command to remove "Greg" from the array.
+people.shift()
+console.log(people);
+// 3. Write the command to remove "James" from the array.
+people.slice(3);
+console.log(people);
+// 4. Write the command to add "Matt" to the front of the array
+people.unshift("Matt")
+console.log(people);
+// 5. Write the command to add your name to the end of the array
+people[4]="dania";
+for (let i = 0; i < people.length; i++){
+console.log(people[i]);}
+//  or
+people.push("dania")
+console.log(people);
+
+// 6. Using a loop, iterate through this array, and after
+// console.log "Mary", exit from the loop
+for ( let i=0;i<people.lenght;i++) {
+
+if (people[i]==="Mary") {
+
+console.log(people[i]);
+break;
+} else {
+continue;
+}
 
 }
+// 7. Write the command to make a copy of the array using a
+// slice. The copy should NOT include "Mary" or "Mat
+
+let people2=people.slice(2,4)
+console.log(people2);
+// Write the command that gives the indexOf where "Mary"
+// is located
+people.indexOf("Mary");
+// 9. Write the command that gives the indexOf where "Foo" is
+// located (this should return -1).
+people.indexOf("foo");
+// Redefine the people variable with the value you started
+// with. Using the splice command, remove "Devon" from
+// the array and add "Elizabeth"
+// Array.splice(position,0,new_element_1,new_element_2,...);
+const people3=people.splice(2, 0,"Elizabeth" );
+console.log(people3);
 </script> 
 </body>
 </html>
