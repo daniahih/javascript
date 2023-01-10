@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validation(password){
+            if (password.length >=7){
+                console.log(`Strong`);
+            }
+            else
+            console.log(`Weak`);
+        }
+
+    //     // Create a function that uses a ternary conditional expression
+       let password2="dania";
+        let password1=password2.length>=7 ? console.log(`Strong`) : console.log(`Weak`);
+
+        // Create a function that uses a && logical operator.
+        var upperCaseLetters = /[A-Z]/;
+  function validation(password){
+
+          if (password.length >=7 && password.value.match(upperCaseLetters)){
+                console.log(` Very Strong`);
+            }
+            else if (password.length >=7 )
+            {
+                console.log(` Strong`);
+            }
+            else
+            console.log(`Weak`);
+        }
+        validation("dania");
+        
+
+
+    </script>
+    
+</body>
+</html>
