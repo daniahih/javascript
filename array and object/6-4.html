@@ -8,12 +8,18 @@
 </head>
 <body>
     <script>
+        function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
       let  populations=[5622,2533,2556,2332]
        function populationPercentages(populations){
         let percentages=[];
-        for (let i=0;i<populations.lenght;i++)
-        console.log(populations);
+        for (let i=0;i<populations.lenght;i++){
+        precentages.push(percentageOfWorld1(populations[i]));
+     }
+     return percentages;
        }
+       console.log(populationPercentages(populations));
     </script>
 </body>
 </html>
