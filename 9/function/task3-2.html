@@ -31,12 +31,13 @@ const power2=a=>{        //explicit
 
 // From function expressions to IIFE functions.
 
-const squareRoot = a => Math.sqrt(a);
+// const squareRoot = a => Math.sqrt(a);
 
+(function(a) {Math.sqrt(a);}) ();
+ 
 
-const randomNumbers = (a, b) => Math.random() * (a - b) +
-b;
-
+// const randomNumbers = (a, b) => Math.random() * (a - b) +b;
+(function(a, b) {Math.random() * (a - b) + b;}) ();
 
 
    </script> 
