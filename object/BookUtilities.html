@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const book1={
+            name:'the game',
+            author:'deekaljen',
+            year:"2020"
+
+        }
+        const book2={
+            name:'in room 7',
+            author:'mohammd',
+            year:"1998"
+        }
+        const bookUtils={
+        }
+        bookUtils.getFirstPublished=function(){
+        const firstBook=book1;
+        const secoundBook=book2;
+        if(firstBook.year > secoundBook.year){
+            return secoundBook;
+        }
+        else if (firstBook.year < secoundBook.year){
+            return firstBook;
+        }
+
+        }
+        bookUtils.getFirstPublished();
+
+        bookUtils.setNewEdition = function(book, editionYear) {
+    book.latestEdition = editionYear;
+}
+
+bookUtils.setNewEdition(book1,2021);
+console.log('before change',book1);
+bookUtils.setNewEdition(book1,2023);
+console.log('after change',book1);
+
+        bookUtils.setLanguage = function(book, language) {
+    book.language = language;
+    return book.language;
+}
+
+bookUtils.setLanguage(book2,'english');
+console.log('before change',book2);
+bookUtils.setLanguage(book2,'arabic');
+console.log('after change',book2);
+
+bookUtils.setTranslation = function(book,language,translator) {
+    let Translation = {
+        translator: translator,
+        language: language
+    }
+    book.translation = Translation;
+}
+
+bookUtils.setTranslation(book2,'Italian','english')
+console.log(book2);
+
+bookUtils.setPublisher = function(book,name,location) {
+    let Publisher = {
+        name: name,
+        location: location
+    }
+    book.publisher = Publisher;
+  
+}
+bookUtils.setPublisher(book1,'first publish','palestine ')
+console.log(book1);
+bookUtils.setPublisher(book2,'publish2','jaban')
+console.log(book2);
+bookUtils.isSamePublisher = function(book1,book2) {
+    return (book1.publisher.name === book2.publisher.name && book1.publisher.location === book2.publisher.location)
+}
+console.log('Same publisher (book1 with book1)? ',bookUtils.isSamePublisher(book1,book1));
+console.log('Same publisher (book1 with book2)? ',bookUtils.isSamePublisher(book1,book2));
+    </script>
+</body>
+</html>
