@@ -59,8 +59,17 @@ people.indexOf("foo");
 // with. Using the splice command, remove "Devon" from
 // the array and add "Elizabeth"
 // Array.splice(position,0,new_element_1,new_element_2,...);
-const people3=people.splice(2, 0,"Elizabeth" );
+const people3=people.splice(2, 2,'Elizabeth','Artie' );
 console.log(people3);
+console.log(people);
+
+// 11. Create a new variable called withBob and set it equal
+// to the people array concatenated with the string of "Bob".
+let withBob=people.concat("bob")
+console.log(people);
+
 </script> 
+
+
 </body>
 </html>
