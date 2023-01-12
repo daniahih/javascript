@@ -9,12 +9,8 @@
 <body>
     <script>
 
-// 1. Fill an array with 100 of the same object using the array fill method.
-let hundred = new Array(100).fill("welcome");
 
-
-
-//create an array of numbers 1-100
+let hundred = new Array(100).fill("hi");
 let arr =[];
 let start = 1;
 let stop = 100;
@@ -23,8 +19,8 @@ let step = 1;
 let range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
 console.log(range(1, 100, 1));
-//5)
-console.log(Array.isArray("d"));
+
+
     </script>
 </body>
 </html>
