@@ -10,15 +10,10 @@
     <script>
         let array=[3,4,4,3,6,3] 
         function removeduplicate(array){
-            let arr=[]
-            for(let i=0;i<array.length;i++){
-                if(array.indexOf(array[i]) === -1) {  
-                arr.push(array[i]);  
-            }  
-        }
-        return arr;
+            const unique = Array.from(new Set(array));
+
+console.log(unique);
             }
-console.log(removeduplicate(arr))
         
     </script>
 </body>
