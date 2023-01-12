@@ -8,10 +8,14 @@
 </head>
 <body>
     <script>
-
-
 let hundred = new Array(100).fill("hi");
+
+
+//2)
+
 let arr =[];
+//create an array of numbers 1-100
+
 let start = 1;
 let stop = 100;
 let step = 1;
@@ -20,7 +24,15 @@ let range = (start, stop, step) => Array.from({ length: (stop - start) / step + 
 
 console.log(range(1, 100, 1));
 
+console.log(Array.isArray("d"));
 
+let letters = ["a", "b", "c"];
+
+//non-modifying
+let lettersCopy = [letters];
+
+//modifying
+let letters2 = letters;
     </script>
 </body>
 </html>
