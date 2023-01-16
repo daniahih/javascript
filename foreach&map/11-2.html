@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1. Write a function called doubleValues which accepts an
+// array of integers and returns a new array with all the
+// values in the array passed to the function doubled
+
+        let numbers =[5,6,4,3,7,2,9]
+    numbers.forEach(function doubleValues(n)
+    {
+        let newarray=n*2
+console.log(newarray)
+    }
+    )
+
+//     Write a function called onlyEvenValues which accepts an
+// array and returns a new array with only the even values in the array passed to the function.
+const newarray=[];
+ numbers.map(function onlyEvenValues(n)
+{
+    if(n%2==0){
+        return newarray.push(n)
+    }
+
+}
+)
+console.log(newarray)
+
+// 3. Write a function called showFirstAndLast which accepts an array as an argument and returns a new array with only the first and last elements from the function’s argument
+// array. The returned array should only contain elements that are strings
+const array=["mohammad","ahmad","dania","mariam","jorge","ghandi"] 
+  var newArray= [];
+function showFirstAndLastforEach(array) {
+    array.forEach((element) => {
+        if(typeof (element) ==="string")
+            newArray.push(element);
+    }); 
+     console.log(newArray);
+    return [newArray[0],newArray[newArray.length-1]]; 
+  
+}
+console.log(showFirstAndLastforEach(array));
+
+// 4-
+function vowelCount(str) {
+    str = str.toLowerCase();
+    let vowelsObj = {}
+    str.split('').forEach((char) => {
+        if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u')
+        {    
+            if(!(char in vowelsObj))
+                vowelsObj[char] = 1;
+            else
+                vowelsObj[char]++;
+        }
+    })
+    return vowelsObj;
+}
+console.log(vowelCount("welcome to dania hih solution"));
+// 5. Write a function capitalize that takes a string as anargument and will return the whole string capitalized.
+function capitalizeMap(str) {
+    return str.split('').map((char) => {
+        return char.toUpperCase();
+    })
+}
+console.log('before: ',"dania");
+console.log('after: ',capitalizeMap("dania"));
+
+// 6-
+let word = 'dania';
+let sentence = "dania traning javascript everyday ";
+function swapCaseMap(str) {
+    return str.split(' ').map((word,index) => {
+        if(index % 2 == 0)
+            return capitalizeMap(word);
+        else
+            return word;
+    })
+
+}console.log(swapCaseMap(sentence));
+
+
+    </script>
+</body>
+</html>
