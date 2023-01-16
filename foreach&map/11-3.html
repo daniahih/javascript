@@ -50,21 +50,40 @@ fish: ["anchovies", "tuna"],
 },
 },
 ];
-// data.forEach(function(element){
-//             console.log(element.name)
-//         }
-        
-//         )
-// let newArray=[]
-data.forEach(function (element){
-if(element.birthday<1990){
-   return {
-    value:element
-   }
-}console.log(element)
+data.forEach(function(element){
+            console.log(element.name)
+        }
+        )
+
+const birthday=data.map(function(el){
+   if(Number(el.birthday.split('-')[2]) < 1990)
+    {
+        return el
+    }
+   
 }
 )
+console.log(birthday);
 
+// 3
+let obj={}
+data.forEach(function food(element){
+element.favoriteFoods.meats.forEach(function (el) {
+ if(!(el in obj))
+ obj[el] = 1;
+ else
+ obj[el]++;
+})
+element.favoriteFoods.fish.forEach(function (el) {
+ if(!(el in obj))
+ obj[el] = 1;
+ else
+ obj[el]++;
+})
+return obj;
+
+})
+console.log(obj);
     </script>
 </body>
 </html>
