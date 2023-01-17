@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+  <script>
+        const numbers = [1, -5, 666, 2, 400, 11];
+     numbers.sort(function(a,b){
+            return a - b ;                                   //[666,400,11,2,1,-5]  descending and ascending [-5,1,2,11,400,666] output expected
+        
+        });
+        numbers.sort(function(a,b){
+            return b-a ;
+        })
+        console.log(numbers)
+    </script>  
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function logString(str) {
+    console.log(`string=${str}`);
+}
+function isString(str, func) {
+    if(typeof str === 'string')
+        func(str);
+}
+function dashes(str) {
+    let temp = str.split(" ").join("-");
+    console.log(temp);
+}
+function myFunction() {
+    console.log("hello from dania hih solution ");
+}
+function firstWordUpperCase(str, func) {
+    str = str.split(" ");
+    let temp = "";
+    for(let i = 0; i < str[0].length; i++)
+        temp += str[0][i].toUpperCase();
+    str[0]=temp;
+    str = str.join(' ');
+    func(str);
+}
+let test = 'hello world dania';
+isString(test,logString);
+
+firstWordUpperCase(test,dashes);
+
+function test1(func) {
+    func();
+}
+
+    </script>
+</body>
+</html>

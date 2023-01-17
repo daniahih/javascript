@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        object1 = {
+    name: 'Object-1'
+}
+object2 = {
+    name: 'Object-2'
+}
+object3 = {
+    name: 'Object-3'
+}
+let temp = new Map();
+
+temp.set(object1,"1");
+temp.set(object2,"2");
+temp.set(object3,"3");
+
+for (let [key,value] of temp) {
+    console.log(`key="${key.name}", value=${value}`);
+}
+    </script>
+</body>
+</html>
