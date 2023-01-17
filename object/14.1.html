@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       const numbers = [1, 5, 10, 2, 4, 11];
+    const maxvalue = numbers.reduce(function(acc,value){
+        return Math.max(acc,value)
+    })
+    console.log(maxvalue);
+const evenNumbers =numbers.filter((el => el%2==0)).reduce((acc,value)=> acc+=value)
+console.log(evenNumbers);
+ 
+const average = numbers.reduce((acc,value) =>  acc+ value, 0) / numbers.length;
+console.log(average);
+
+
+   </script> 
+</body>
+</html>
