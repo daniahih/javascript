@@ -25,12 +25,34 @@ amount: 4
 ],
 cashRegister: 200
 }
-function getCandy(candyStore, id){
- return obj.candies.find(el=>el.id=id)
+getCandy = function(candyStore, id) {
+    return (candyStore.candies.find(element => element.id == id));
 }
+console.log(getCandy(candyStore,"as12f"));
 
+getprice = function(candyStore, id) {
+    return (candyStore.candies.find(element => element.price == id));
+}
+console.log(getprice(candyStore,5))
 
+addCandy = function(candyStore,id,name,price) {
+    tempCandy = {
+        name: name,
+        id: id,
+        price: price,
+        amount: 1
+    }
+    candyStore.candies.push(tempCandy);
+}
+addCandy(candyStore,"asd123","Milka",10)
+console.log(candyStore);
 
+buy = function(candyStore,id) {
+    getCandy(candyStore,id).amount--;
+    candyStore.cashRegister += getCandy(candyStore,id).price;
+}
+buy(candyStore,"asd123");
+console.log(candyStore)
 
     </script>
 </body>
