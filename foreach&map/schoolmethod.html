@@ -53,8 +53,9 @@ school.findPerson = function(type,id) {
         return obj.id === id ? true : false;
     })[0];
 }
-
 console.log(school.findPerson('students',13));
+
+// 2
 school.assignStudent = function(id,subject) {
     this[`teachers`].forEach(teacher => {
         if(teacher.capacityLeft > 0 && teacher.subjects.includes(subject))
@@ -64,13 +65,16 @@ school.assignStudent = function(id,subject) {
         }
     });
 }
+
+
 school.assignTeachersSubject = function(id,subject) {
     this[`teachers`].forEach(teacher => {
         if(teacher.id === id && !teacher.subjects.includes(subject))
             teacher.subjects.push(subject);
     })
 }
-
+school.assignTeachersSubject(1,'Sport');
+console.log('pinchas subjects: ',school[`teachers`][0].subjects);
 
     </script>
     
