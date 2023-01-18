@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function funcA() {
+            // if i but here var a=1; it will work 
+console.log(a); //hoisting , javascript engine knows that theres a varible but i dont know the assiging value so this will give me undefind 
+console.log(foo()); // it will work becouse iam in the parent function and it will give me 2 ,
+                          //  and if i but it outside the parent function it woduldnt wor
+var a = 1;
+function foo() {
+return 2;
+}
+}
+
+funcA();
+
+var fullName = 'John Doe';
+var obj = {
+fullName: 'Colin Ihrig',
+prop: {
+fullName: 'Aurelio De Rosa',
+getFullName: function () {
+return this.fullName;
+}
+}
+
+};
+console.log(obj.prop.getFullName()); // this will call the full name inside the object  works normally 
+var test = obj.prop.getFullName;  // this will give me the value from the local scoop 
+console.log(test());
+
+// block3
+function funcB() {
+let a = b = 0;
+a++;
+return a;
+}
+funcB();  // it supposed to return 1
+console.log(typeof a); // it suposed to not run becouse its outside the function scoop // undifind 
+console.log(typeof b);// it suposed to not run becouse its outside the function scoop // undifind 
+
+
+// block4
+function funcC() {
+console.log("1");
+}
+funcC();
+function funcC() {
+console.log("2");
+}
+funcC(); // will return 2 becouse its on funncc scoop
+
+//block 5
+
+function funcD1() {
+d = 1;
+}
+funcD1();
+console.log(d);
+function funcD2() {
+var e = 1;
+}
+funcD2(); 1 // it will return the value in local scope 
+console.log(e); // would not log "e", because it was declared inside a function and not in the global scope.
+
+
+
+// block6
+function funcE() {
+console.log("Value of f in local scope: ", f); // will print 1 becouse theres a  global varibles from outside  
+}
+console.log("Value of f in global scope: ", f); // undiefend becouse thers cant see the value after the print massage 
+var f = 1;
+funcE();
+
+
+
+
+    </script>
+</body>
+</html>
