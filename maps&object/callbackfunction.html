@@ -15,13 +15,8 @@ function isString(str, func) {
     if(typeof str === 'string')
         func(str);
 }
-function dashes(str) {
-    let temp = str.split(" ").join("-");
-    console.log(temp);
-}
-function myFunction() {
-    console.log("hello from dania hih solution ");
-}
+
+
 function firstWordUpperCase(str, func) {
     str = str.split(" ");
     let temp = "";
@@ -30,15 +25,25 @@ function firstWordUpperCase(str, func) {
     str[0]=temp;
     str = str.join(' ');
     func(str);
+    
 }
-let test = 'hello world dania';
-isString(test,logString);
+function dashes(str) {
+    let temp = str.split(" ").join("-");
+   console.log(temp);
+} 
 
-firstWordUpperCase(test,dashes);
 
-function test1(func) {
-    func();
-}
+// function myFunction() {
+//     console.log("hello from dania hih solution ");
+// }
+// let test = 'hello world dania';
+// isString(test,logString);
+
+// firstWordUpperCase(test,dashes);
+
+// function test1(func) {
+//     func();
+// }
 
     </script>
 </body>

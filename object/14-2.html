@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const people = [
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
+];
+function extractValue(arr, key) {
+    return arr.reduce(function(accum, object) {
+        if (key in object) accum.push(object[key]);
+        return accum;
+    }, []);
+}
+console.log(extractValue([{name: 'bob'}, {name: 'jim'}, {name: 'sarah'}, {age: 100}], 'name'));
+    </script>
+</body>
+</html>
