@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var b = 1;
+function someFunction(number) {
+function otherFunction(input) {
+return b;
+}
+b = 5;
+return otherFunction;
+}
+var firstResult = someFunction(9); // the value will be 5 because we save the return of someFunction(9), which is otherfunction (as a declaration).
+//therefore when calling firstResult(2), we are actually calling otherFunction(2), which returns b, which is defined as 5 in that scope.
+var result = firstResult(2);
+        
+
+
+// block2
+var a = 1;
+function b2() {
+a = 10;
+return;
+function a() { }
+}
+b2(); // it will retrun the value of 10 because a in the scope function of the function b2 
+console.log(a); // it will return 1 becouse the value of a in the global scoope is 1  
+
+
+//block 3
+let i;
+for (i = 0; i < 3; i++) {
+const log = () => {
+console.log(i);
+}
+setTimeout(log, 100);
+}
+// it will return 3 3times becouse  of the delay in 100 and will not found the value of i 
+
+
+    </script>
+</body>
+</html>
