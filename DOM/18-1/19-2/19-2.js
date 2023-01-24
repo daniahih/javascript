@@ -29,7 +29,9 @@ div.append(ol)
         console.log(fullName)
             const li =document.createElement('li')
             li.innerText=fullName
-            ol.append(li)
+            ol.append(li);
+            li.setAttribute("data-id",element.id)
+
     })
     ol.style.listStyle= 'none';
 
