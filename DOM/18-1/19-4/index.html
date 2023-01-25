@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <script >
+
+const div =document.createElement('div');
+const h1=document.createElement('h1');
+const ul=document.createElement('ul');
+for(i=0;i<5;i++)
+    {
+        var li=document.createElement('li');
+        li.innerHTML="<a href=''>links</a>"+" "+"follow me";
+        ul.appendChild(li);
+    }
+const newContent = document.createTextNode('hello from js')
+h1.innerHTML="hello dania"
+const img =document.createElement('img')
+img.src="random.jpg"
+img.style.width="50%";
+img.style.border="1px solid black"
+div.appendChild(newContent);
+document.body.appendChild(div);
+div.appendChild(h1);
+div.appendChild(ul);
+div.appendChild(img)
+
+</script> 
+</body>
+</html>
