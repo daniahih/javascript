@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(195, 190, 190);
+}
+h1{
+text-align: center;
+margin-top:30vh;
+   color: black;
+   font-size: 30px;
+}
+h2{
+    text-align: center;
+    margin-top:1vh;
+       color: black; 
+}
+.box{
+    width:400px;
+    height: 20vh;
+    text-align: center;
+    margin-left: 42%;
+    display: flex;
+    
+}
+.box input{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 40px;
+    height: 40px;
+}
