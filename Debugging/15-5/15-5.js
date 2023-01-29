@@ -8,8 +8,9 @@ function countOccurrences (str, char){
     let counter = 0 ;
     for ( let i = 0 ; i < str .length; i ++ ){
     if ( str . charAt ( i ) === char ){
-    counter + 1 ;
-    }
+    counter + 1 ;  //error here 
+    //   "counter+1" is not valid. Should be counter++ / counter+=1 / counter = counter +1
+     }
     } return counter ;
     }
     countOccurrences ( "ini mini miny moe" , "n" );
