@@ -9,3 +9,19 @@ for(let i=0; i < listOfTextbox.length-1; i++)
         console.log("2");
     })
 }
+listOfTextbox[0].addEventListener('paste',(event)=>{
+    let pasteData = (event.clipboardData || window.clipboardData).getData('text');
+    pasteData = pasteData.split('');
+    for(let i=0; i < listOfTextbox.length; i++)
+    {
+        
+        listOfTextbox[i].value=pasteData[i];
+    }
+    document.activeElement.blur();
+})
+
+
+btn .addEventListener('click',()=> {
+    alert('thankyou')
+    location.reload();
+})
