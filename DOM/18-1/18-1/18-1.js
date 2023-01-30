@@ -1,0 +1,12 @@
+const h1=document.getElementsByTagName('h1')
+const p=document.getElementsByTagName('p');
+const img=document.getElementsByTagName('img')
+const x=document.getElementsByClassName('x')
+const y =document.getElementById('y')
+const input =document.getElementsByTagName('input')
+console.log(h1)
+console.log(p)
+console.log(img)
+console.log(x)
+console.log(y)
+console.log(input)
