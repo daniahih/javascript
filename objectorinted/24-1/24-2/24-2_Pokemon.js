@@ -17,8 +17,10 @@ function Pokemon(pokemonName, pokemonType,
 
     picachu.callPokemon()
     picachu.attack(0);
+    picachu.attack(1);
     dania.callPokemon()
     dania.attack(0)
+    dania.attack(1);
     Kirlia.callPokemon()
     Kirlia.attack(0)
     Kirlia.attack(1)
