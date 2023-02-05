@@ -16,4 +16,4 @@ const hero = {
      console.log(whoIsStronger(hero.getStrength)); // it return you are stronger , so theres a problem of calling the function 
 
       // to fixed it i need to call the object hero inside the getStrength by using getStrength.call(hero)
-       // and now the code will give me  Iam stronger 
+       // and now the code will give me  Iam stronger commit 
